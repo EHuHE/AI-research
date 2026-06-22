@@ -3,523 +3,126 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Academic personal homepage of He Hu, graduate student at Hubei University."
-    />
-    <title>He Hu | Academic Homepage</title>
+    <meta name="description" content="Compatibility page for the academic homepage of He Hu." />
+    <link rel="canonical" href="https://ehuhe.github.io/" />
+    <title>He Hu | Homepage Moved</title>
     <style>
       :root {
         color-scheme: light;
-        --page: #f6f6f3;
-        --paper: #fffdf9;
-        --ink: #1f2933;
-        --muted: #5b6770;
-        --quiet: #7a858d;
-        --line: #d9ded7;
-        --rule: #aeb9ae;
-        --accent: #24415f;
-        --accent-soft: #eef3f7;
-        --link: #0b4f8a;
+        --bg: #f7f8fa;
+        --surface: #ffffff;
+        --text: #1f2933;
+        --muted: #5f6b76;
+        --border: #d9dee4;
+        --link: #075a75;
       }
 
       * {
         box-sizing: border-box;
       }
 
-      html {
-        background: var(--page);
-      }
-
       body {
         margin: 0;
-        color: var(--ink);
-        font-family:
-          Georgia, "Times New Roman", "Noto Serif", "Source Serif Pro", serif;
-        font-size: 17px;
-        line-height: 1.68;
-        text-rendering: optimizeLegibility;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.65;
+      }
+
+      main {
+        width: min(760px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 64px 0;
+      }
+
+      .panel {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: 32px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(32px, 6vw, 44px);
+        line-height: 1.12;
+      }
+
+      h2 {
+        margin: 28px 0 8px;
+        font-size: 18px;
+      }
+
+      p,
+      dd {
+        color: var(--muted);
+      }
+
+      dl {
+        display: grid;
+        gap: 12px;
+        margin: 20px 0 0;
+      }
+
+      dt {
+        font-size: 12px;
+        font-weight: 750;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      dd {
+        margin: 0;
+        overflow-wrap: anywhere;
       }
 
       a {
         color: var(--link);
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
-      }
-
-      a:hover {
-        color: var(--accent);
-      }
-
-      .page {
-        width: min(1040px, calc(100% - 32px));
-        margin: 0 auto;
-        padding: 32px 0 48px;
-      }
-
-      .masthead {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 24px;
-        padding: 18px 0;
-        border-bottom: 1px solid var(--line);
-        color: var(--muted);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        font-size: 0.86rem;
-        letter-spacing: 0;
-      }
-
-      .masthead strong {
-        color: var(--ink);
-        font-weight: 650;
-      }
-
-      .masthead-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 14px;
-      }
-
-      .profile {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 300px;
-        gap: 48px;
-        margin-top: 34px;
-        background: var(--paper);
-        border-top: 2px solid var(--accent);
-        border-bottom: 1px solid var(--line);
-        padding: 44px 0 40px;
-      }
-
-      header {
-        max-width: 680px;
-      }
-
-      .eyebrow {
-        margin: 0 0 12px;
-        color: var(--accent);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        font-size: 0.78rem;
         font-weight: 700;
-        letter-spacing: 0.11em;
-        text-transform: uppercase;
+        text-underline-offset: 4px;
       }
 
-      h1,
-      h2,
-      h3,
-      p {
-        margin: 0;
-      }
-
-      h1 {
-        color: var(--ink);
-        font-size: clamp(2.05rem, 5vw, 2.8rem);
-        font-weight: 500;
-        letter-spacing: 0;
-        line-height: 1.05;
-      }
-
-      .chinese-name {
-        margin-top: 10px;
-        color: var(--muted);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        font-size: 1rem;
-      }
-
-      .role {
-        margin-top: 24px;
-        color: var(--accent);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        font-size: 1.05rem;
-        font-weight: 650;
-      }
-
-      .institution {
-        margin-top: 6px;
-        color: var(--muted);
-      }
-
-      .summary {
-        margin-top: 28px;
-        max-width: 66ch;
-      }
-
-      .verification-note {
-        margin-top: 24px;
-        padding-left: 18px;
-        border-left: 3px solid var(--rule);
-        color: var(--muted);
-        font-size: 0.98rem;
-      }
-
-      aside {
-        align-self: start;
-        border-left: 1px solid var(--line);
-        padding-left: 28px;
-      }
-
-      .contact-card {
-        display: grid;
-        gap: 18px;
-      }
-
-      .field {
-        display: grid;
-        gap: 4px;
-      }
-
-      .label {
-        color: var(--quiet);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .value {
-        color: var(--ink);
-        overflow-wrap: anywhere;
-      }
-
-      .content {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 300px;
-        gap: 48px;
-        padding: 38px 0 0;
-      }
-
-      section + section {
-        margin-top: 36px;
-      }
-
-      h2 {
-        color: var(--accent);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        font-size: 0.95rem;
-        font-weight: 750;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      h3 {
-        margin-top: 20px;
-        color: var(--ink);
-        font-size: 1rem;
-        font-weight: 650;
-      }
-
-      .section-body {
-        margin-top: 13px;
-      }
-
-      ul {
-        margin: 12px 0 0;
-        padding-left: 20px;
-      }
-
-      li + li {
-        margin-top: 5px;
-      }
-
-      .interest-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px 28px;
-        padding-left: 0;
-        list-style: none;
-      }
-
-      .interest-list li {
-        position: relative;
-        margin: 0;
-        padding-left: 18px;
-      }
-
-      .interest-list li::before {
-        position: absolute;
-        left: 0;
-        top: 0.73em;
-        width: 7px;
-        height: 1px;
-        background: var(--accent);
-        content: "";
-      }
-
-      .profile-list {
-        display: grid;
-        gap: 10px;
-        margin: 14px 0 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .profile-list li {
-        display: flex;
-        justify-content: space-between;
-        gap: 18px;
-        margin: 0;
-        padding-bottom: 10px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .profile-list span:first-child {
-        color: var(--ink);
-        font-weight: 650;
-      }
-
-      .profile-list span:last-child {
-        color: var(--quiet);
-        text-align: right;
-      }
-
-      .small-note {
-        margin-top: 12px;
-        color: var(--quiet);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        font-size: 0.9rem;
-        line-height: 1.55;
-      }
-
-      footer {
-        display: flex;
-        justify-content: space-between;
-        gap: 24px;
-        margin-top: 44px;
-        padding: 18px 0 0;
-        border-top: 1px solid var(--line);
-        color: var(--quiet);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        font-size: 0.88rem;
-      }
-
-      @media (max-width: 820px) {
-        .profile,
-        .content {
-          grid-template-columns: 1fr;
-          gap: 30px;
-        }
-
-        aside {
-          border-left: 0;
-          border-top: 1px solid var(--line);
-          padding: 26px 0 0;
-        }
-
-        .content {
-          padding: 32px 0 0;
-        }
-
-        .profile {
-          padding: 34px 0;
-        }
-      }
-
-      @media (max-width: 600px) {
-        body {
-          font-size: 16px;
-        }
-
-        .page {
-          width: min(100% - 20px, 1040px);
-          padding: 16px 0 30px;
-        }
-
-        .masthead,
-        footer {
-          align-items: flex-start;
-          flex-direction: column;
-        }
-
-        .masthead-links {
-          justify-content: flex-start;
-        }
-
-        .profile {
-          margin-top: 20px;
-          padding: 26px 0;
-        }
-
-        .content {
-          padding: 28px 0 0;
-        }
-
-        .interest-list {
-          grid-template-columns: 1fr;
-        }
-
-        .profile-list li {
-          display: grid;
-          gap: 2px;
-        }
-
-        .profile-list span:last-child {
-          text-align: left;
-        }
-
-        footer {
-          padding: 16px 0 0;
-        }
+      .notice {
+        border-left: 3px solid var(--link);
+        margin: 24px 0;
+        padding-left: 16px;
       }
     </style>
   </head>
   <body>
-    <main class="page">
-      <nav class="masthead" aria-label="Page overview">
-        <strong>Academic Homepage</strong>
-        <div class="masthead-links">
-          <a href="#contact">Contact</a>
-          <a href="#interests">Research Interests</a>
-          <a href="#links">Links</a>
-        </div>
-      </nav>
+    <main>
+      <section class="panel" aria-labelledby="page-title">
+        <p>Academic homepage compatibility page</p>
+        <h1 id="page-title">He Hu</h1>
+        <p>Chinese name: 胡禾</p>
 
-      <article class="profile" aria-labelledby="page-title">
-        <div>
-          <header>
-            <p class="eyebrow">Graduate Student</p>
-            <h1 id="page-title">He Hu</h1>
-            <p class="chinese-name">Chinese name: 胡禾</p>
-            <p class="role">Graduate Student</p>
-            <p class="institution">
-              School of Cryptography, Hubei University
-            </p>
-            <p class="institution">
-              Fang Binxing Academician Experimental Class
-              <span lang="zh-CN">（方滨兴院士实验班）</span>
-            </p>
-          </header>
+        <p class="notice">
+          This project page is kept for compatibility with older links. The current academic homepage is
+          <a href="https://ehuhe.github.io/">https://ehuhe.github.io/</a>.
+        </p>
 
-          <p class="summary">
-            I am a graduate student at the School of Cryptography, Hubei
-            University, and a student in the Fang Binxing Academician
-            Experimental Class <span lang="zh-CN">（方滨兴院士实验班）</span>.
-            My academic interests include machine learning, natural language
-            processing, knowledge graphs, information retrieval, and AI agents.
-            I am currently reading recent academic literature, developing my
-            research skills, and preparing work for initial academic submission.
-            This page lists my academic affiliation, contact information,
-            research interests, and public profile links.
-          </p>
-
-          <p class="verification-note">
-            The email address below is shown in plain text so that academic
-            systems and conference platforms can verify my identity and
-            affiliation.
-          </p>
-        </div>
-
-        <aside id="contact" aria-labelledby="contact-heading">
-          <h2 id="contact-heading">Contact</h2>
-          <div class="contact-card section-body">
-            <div class="field">
-              <span class="label">Email</span>
-              <a class="value" href="mailto:202521120012751@stu.hubu.edu.cn"
-                >202521120012751@stu.hubu.edu.cn</a
-              >
-            </div>
-            <div class="field">
-              <span class="label">Affiliation</span>
-              <span class="value">School of Cryptography, Hubei University</span>
-            </div>
-            <div class="field">
-              <span class="label">Program</span>
-              <span class="value">
-                Fang Binxing Academician Experimental Class
-                <span lang="zh-CN">（方滨兴院士实验班）</span>
-              </span>
-            </div>
-            <div class="field">
-              <span class="label">Location</span>
-              <span class="value">China</span>
-            </div>
-            <div class="field">
-              <span class="label">Page Purpose</span>
-              <span class="value">Academic profile and contact</span>
-            </div>
+        <h2>Identity and Contact</h2>
+        <dl>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:202521120012751@stu.hubu.edu.cn">202521120012751@stu.hubu.edu.cn</a></dd>
           </div>
-        </aside>
-      </article>
+          <div>
+            <dt>Affiliation</dt>
+            <dd>School of Cryptography, Hubei University</dd>
+          </div>
+          <div>
+            <dt>Program</dt>
+            <dd>Fang Binxing Academician Experimental Class <span lang="zh-CN">（方滨兴院士实验班）</span></dd>
+          </div>
+        </dl>
 
-      <div class="content">
-        <div>
-          <section id="interests" aria-labelledby="interests-heading">
-            <h2 id="interests-heading">Research Interests</h2>
-            <ul class="interest-list section-body">
-              <li>Machine Learning</li>
-              <li>Natural Language Processing</li>
-              <li>Knowledge Graphs</li>
-              <li>Information Retrieval</li>
-              <li>AI Agents</li>
-            </ul>
-          </section>
-
-          <section aria-labelledby="current-heading">
-            <h2 id="current-heading">Current Academic Focus</h2>
-            <div class="section-body">
-              <p>
-                My current work is focused on strengthening my research
-                foundation, reviewing recent literature, and preparing research
-                work for early academic submission. My graduate study is also
-                connected with the Fang Binxing Academician Experimental Class
-                at Hubei University. This page does not list publications,
-                awards, advisors, or projects unless they are ready to be shared
-                accurately.
-              </p>
-            </div>
-          </section>
-
-          <section aria-labelledby="publications-heading">
-            <h2 id="publications-heading">Publications</h2>
-            <div class="section-body">
-              <p>
-                No public publications are listed on this page at this time.
-                Future publications will be added only when they are publicly
-                available and can be cited accurately.
-              </p>
-            </div>
-          </section>
-        </div>
-
-        <aside id="links" aria-labelledby="links-heading">
-          <h2 id="links-heading">Links</h2>
-          <ul class="profile-list">
-            <li>
-              <span>GitHub</span>
-              <a href="https://github.com/EHuHE" rel="me">github.com/EHuHE</a>
-            </li>
-          </ul>
-          <p class="small-note">
-            Google Scholar, ORCID, DBLP, Semantic Scholar, and other academic
-            identifiers will be added after the corresponding public profiles
-            are available.
-          </p>
-        </aside>
-      </div>
-
-      <footer>
-        <span>Last updated: 2026-06-23</span>
-        <span>Maintained by He Hu as a public academic homepage.</span>
-      </footer>
+        <h2>Current Homepage</h2>
+        <p>
+          Please use <a href="https://ehuhe.github.io/">https://ehuhe.github.io/</a> for the latest academic profile,
+          research interests, posts, and RSS feed.
+        </p>
+      </section>
     </main>
   </body>
 </html>
